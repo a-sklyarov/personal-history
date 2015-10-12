@@ -1,0 +1,5 @@
+I created a code that produces estimates of the 8-dimensional integral given in the manual, using a Monte Carlo technique. As expected, the error in the estimates falls off with increasing the number of Monte Carlo sample points. The exact behavior was investigated and from the gnuplot plot "MonteCarloPlot.png" it becomes evident that the error falls off as N^(-1/2). 
+
+The code was able to produce a single estimate with N = 10^9 sample points in about 5 minutes. The estimate was 537.1866 +- 0.0012.
+
+Using N = 10^7 the best estimate and error from nt = 25 estimates was 537.1853 +- 0.0119.

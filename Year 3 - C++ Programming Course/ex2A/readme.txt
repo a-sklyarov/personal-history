@@ -1,0 +1,24 @@
+Core Task:
+
+I managed to create a program which uses the RK4 method with adaptive step control (instead of fixed steps as given in the lecture handout) to solve the second order ODE representing a general driven pendulum with damping. In the core task the driving term and the damping were not switched on even though the program had the full capabilities of including them. The well-established routine from the GSL library was used. 
+
+The code was tested for a small amplitude theta0 = 0.01 (as instructed in the manual) with different integration times. The resulting plots for tmax = 20 and tmax = 100 are included in the files "TestSol1.png" and "TestSol2.png". The theoretical expectation in those cases is harmonic motion (cos(x)) and this was overlaid on the two plots. Full agreement is observed. 
+
+Then the conservation of energy was tested with tmax = 20 000. The resulting time dependence of the energy is plotted in the file "EnergyCons.png". We can see that the energy is linearly growing with time at a rate of about 1 part in ten billion per oscillation. 
+
+Then the relationship between the period and the amplitude theta0 was examined. The result is shown in the file "Period_vs_Amplitude.png". As expected, at low values of theta0 the period tends to 2pi (harmonic oscillator) and at large values of theta0 the period tends to infinity. In fact, at theta0 = pi the pendulum is at unstable equilibrium at the top and the period is infinite.
+
+The value for the period at theta0 = pi/2 is: 7.41629
+
+
+Supplementary Task: (source code for both tasks is the same as the one for the CoreTask)
+
+The cases when damping and the driving term are present were tested. Initially, only the damping term was switched on and varied. This resulted in the plots "Damping1.png", "Damping5.png", "Damping10.png", "Energy05.png", corresponding to the amplitude against time for q=1, 5, 10 and the energy against time for q=0.5. The plots show the expected behaviour of damped motion. 
+
+Afterwards, the driving term was switched on as well and the behaviour of the pendulum was examined for different values of F. The exhibited behaviour was similar in most cases and therefore one plot can summarize it - "Drive05.png". 
+
+The graph "Period_vs_Amplitude_Damped_Driven.png" shows the relationship between the period and the initial displacement theta0. It can be seen that the function is not well-behaved and very close initial conditions may end up having significantly different periods (not tremendously different however).
+
+The cases F=1.2, theta0=0.2 and F=1.2, theta0=0.20001 were integrated for a relatively long time (tmax = 200 000). The calculated periods for the two cases were: 9.4247765981 and 9.4247765975. It is difficult to say if the difference comes from actual physical deviation or from rounding error during the computation (since it is small). Our expectation, however, is that the two periods should be at least slightly different and therefore the solutions should diverge after sufficiently long time.
+
+
