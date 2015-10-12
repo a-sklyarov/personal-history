@@ -1,0 +1,24 @@
+CC		= g++ -O2 -g -pedantic -Wall
+INCLUDE		= -I$(CAV_INC) -I$(GSL_INC) -I$(FFTW_INC) 
+LIBS		= $(CAV_LIB) $(GSL_LIB) $(FFTW_LIB)
+RM		= /bin/rm -f
+
+SOURCES_1	= main.cc simulation.cc lattice.cc
+
+OBJECTS_1	= $(SOURCES_1:.cc=.o)
+
+EXECUTABLE_1 	= simulation.exe
+
+all: project
+
+project: $(SOURCES_1) $(EXECUTABLE_1)
+	
+$(EXECUTABLE_1): $(OBJECTS_1) 
+	$(CC) $(INCLUDE) $(OBJECTS_1) -o $@ $(LIBS)
+
+%.o : %.cc
+	$(CC) $(INCLUDE) -c $< -o $@
+
+clean: 
+	$(RM) *.o *.exe
+
