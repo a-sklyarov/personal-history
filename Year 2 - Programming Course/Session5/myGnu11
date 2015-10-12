@@ -1,0 +1,17 @@
+plot 'output/sun' w p ps 3 pt 5, \
+ 'output/file1.dat' every gap2::tmin2::tmax2 u 2:3 w p ps 4 pt 4,\
+ 'output/file1.dat' every 1::tmin1::tmax1 u 2:3 w l lt 2 lc rgb "red", \
+ 'output/file2.dat' every gap2::tmin2::tmax2 u 2:3 w p ps 4 pt 4,\
+ 'output/file2.dat' every 1::tmin1::tmax1 u 2:3 w l lt 2 lc rgb "blue", \
+ 'output/file3.dat' every gap2::tmin2::tmax2 u 2:3 w p ps 4 pt 4,\
+ 'output/file3.dat' every 1::tmin1::tmax1 u 2:3 w l lt 2 lc rgb "black", \
+ 'output/file4.dat' every gap2::tmin2::tmax2 u 2:3 w p ps 4 pt 4,\
+ 'output/file4.dat' every 1::tmin1::tmax1 u 2:3 w l lt 2 lc rgb "green", \
+ 'output/file5.dat' every gap2::tmin2::tmax2 u 2:3 w p ps 4 pt 4,\
+ 'output/file5.dat' every 1::tmin1::tmax1 u 2:3 w l lt 2 lc rgb "orange"
+ pause 0.1
+tmin1=tmin1+step
+tmin2=tmin2+step
+tmax1=tmax1+step
+tmax2=tmax2+step
+if ( tmax1 < LastLine ) call 'gnu11' 

@@ -1,0 +1,1 @@
+plot 'file5.dat' u 1:25 w l lt 7, 'file5.dat' u 1:47 w l lt 8;

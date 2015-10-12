@@ -1,0 +1,34 @@
+set size ratio -1
+set nokey
+r = 10
+r2= 10.5
+set xrange [-r:r2]
+set yrange [-r:r2]
+plot 'output/sun' w p ps 3 pt 5, \
+ 'output/1' u 2:3 w l lt 2
+
+pause -1 'ready'
+
+plot 'output/sun' w p ps 3 pt 5, \
+ 'output/1' u 2:3 w l lt 2, \
+ 'output/1' every 10 u 2:3 w p ps 4 pt 3
+
+pause -1 'ready'
+   
+plot 'output/sun' w p ps 3 pt 5, \
+ 'output/1' u 2:3 w l lt 2,\
+ 'output/1' every 20 u 2:3:4:5 w vector lt 5
+ 
+pause -1 'ready'
+   
+plot 'output/sun' w p ps 3 pt 5, \
+ 'output/1' u 2:3 w l lt 2,\
+ 'output/1' every 2 u 2:3:4:5 w vector lt 6, \
+ 'output/1' every 10 u 2:3 w p ps 4 pt 4
+
+pause -1 'and finally here is the energy versus time'
+
+set autos xy
+set size noratio 
+plot \
+ 'output/1' u 1:8 w l lt 2

@@ -1,0 +1,9 @@
+plot 'output/sun' w p ps 3 pt 5, \
+ 'output/1' every gap2::tmin2::tmax2 u 2:3 w p ps 4 pt 4,\
+ 'output/1' every 1::tmin1::tmax1 u 2:3 w l lt 2
+ pause 0.1
+tmin1=tmin1+step
+tmin2=tmin2+step
+tmax1=tmax1+step
+tmax2=tmax2+step
+if ( tmax1 < LastLine ) call 'gnu11' 

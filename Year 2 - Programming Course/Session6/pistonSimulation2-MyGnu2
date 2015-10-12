@@ -1,0 +1,1 @@
+plot './file2.dat' u 1:15 w l lt 8;

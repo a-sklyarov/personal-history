@@ -1,0 +1,12 @@
+set size ratio -1
+set nokey
+r = 7
+r2= 7.5
+set xrange [-r:r2]
+set yrange [-r:r2]
+plot 'output/sun' w p ps 3 pt 5, \
+ 'output/file1.dat' u 2:3 w l lt 2 lc rgb "red", \
+ 'output/file2.dat' u 2:3 w l lt 2 lc rgb "blue", \
+ 'output/file3.dat' u 2:3 w l lt 2 lc rgb "black", \
+ 'output/file4.dat' u 2:3 w l lt 2 lc rgb "green", \
+ 'output/file5.dat' u 2:3 w l lt 2 lc rgb "orange"

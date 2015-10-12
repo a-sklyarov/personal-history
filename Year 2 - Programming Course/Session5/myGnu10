@@ -1,0 +1,19 @@
+# This gnuplot movie
+# shows six evolving snapshots
+set size ratio -1
+set nokey
+r = 5
+r2= 5.5
+set xrange [-r:r2]
+set yrange [-r:r2]
+# time range for line
+tmin1 = 0
+tmax1 = 100
+# time range for points
+tmin2 = 50
+tmax2 = 100
+# gap between points
+gap2 = 10
+step = 3
+LastLine = 8000
+call 'gnu11'

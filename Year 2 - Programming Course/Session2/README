@@ -1,0 +1,5 @@
+I set myself the following additional goal (devised by me):
+
+I decided to write a program to find the sum of consecutive prime numbers. Then I extended it and turned it around in such a way that the user chooses a number S and the program then computes how many consecutive prime numbers, starting from 2, are needed, so that their sum becomes larger or equal to S. I don't think that the program may be found practically useful in any particular way but it was a very good exercise and I think I managed to use most of the new skills learned during the session.
+
+My solution was in a file called primeSum.cc

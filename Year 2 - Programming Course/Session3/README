@@ -1,0 +1,5 @@
+I wrote a program which estimates ln(2) to 2 decimal places by a Monte Carlo method in a very similar way to the program example given in the tutorial, which estimated pi. My approach is to take the function y = 1/x in the unit square, defined by x in the range [1, 2] and y in the range [0, 1], and use that the area under its graph is equal to ln(2). Therefore, by generating random points, uniformly distributed in this unit square, the program can estimate ln(2) as the ratio between the number of points in the region below the graph and the total number of points. I have used that a point (x, y) is below the graph if x*y < 1. In order to get ln(2) to 2 decimal places I made sure that the expected error in the estimate is in the third decimal place. The needed number of random points then is roughly about 100 000. 
+
+I have used part of the source code from the example program given in the tutorial but I made the solution myself!
+
+My solution was in a file called RandLog.cc

@@ -1,0 +1,5 @@
+I set myself the following additional goal (devised by me):
+
+I decided to write a program to find different orders of root of a number. Then I extended it so that the user can additionally choose N and the program produces the Nth root of the number. I had to use an additional function which raises a number to a power and call it inside the body of the function which evaluates the Nth root. It really helped me get a better grasp of functions.
+
+My solution was in a file called NRoot.cc

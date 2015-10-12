@@ -1,0 +1,5 @@
+I set myself the following additional goal (devised by me):
+
+I decided to write a program to produce all the squares up to a given number, which is chosen by the user. Then I extended it in such a way that the user can also choose the power to which each number will be raised.
+
+My solution was in a file called Powers.cc
